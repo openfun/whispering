@@ -110,7 +110,7 @@ def get_opts() -> argparse.Namespace:
     group_model.add_argument(
         "--language",
         type=str,
-        choices=sorted(LANGUAGES.keys())
+        choices= ["multilanguage"] + sorted(LANGUAGES.keys())
         + sorted([k.title() for k in TO_LANGUAGE_CODE.keys()]),
     )
     group_model.add_argument(
